@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="p-5">
+    <div class="container p-3 m-auto w-50 bg-secondary">
+        <!-- Medicion 200Hz -->
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center mt-3">DAP - Mediciones a lo largo del ancho de banda audible</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+               <h3 class="text-center">Frecuencia inicial: 200Hz</h3>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                
+                <button class="btn btn-info mr-2" type="button" id="rango1-200">Rango 1</button>
+                <button class="btn btn-info mr-2" type="button" id="rango2-200">Rango 2</button>
+                <button class="btn btn-info mr-2" type="button" id="rango3-200">Rango 3</button>
+                <button class="btn btn-danger mr-2" id="pause1" onclick="stopElement()">Pause</button>
+
+
+                <label for="seconds">Segundos del intervalo:</label>
+                <select name="seconds" id="seconds-200">
+                    <option value="1">1 segundo</option>
+                    <option value="2">2 segundos</option>
+                    <option value="3" selected>3 segundos</option>
+                    <option value="4">4 segundos</option>
+                    <option value="5">5 segundos</option>
+                </select>
+
+            </div>
+        </div>
+
+        
+        <!-- Prueba 1 medicion 200Hz-->
+        
+        <div class="row input-group">
+        <div class="col">
+        <div class="input-group-prepend">
+        <button class="btn btn-primary mr-2" id="play1">Play</button>
+        <button class="btn btn-primary mr-2" id="pause1" onclick="stopElement()">Pause</button>
+        <button class="btn btn-info mr-2" type="button" id="boton1">+1 Hz</button>
+        <button class="btn btn-info mr-2" type="button" id="boton-1">-1 Hz</button>
+        <input type="text" class="form-control" value="200" placeholder="" aria-label="" aria-describedby="basic-addon1" id="input1">
+        <div class="input-group-append">
+        <span class="input-group-text" id="basic-addon2">Hz</span>
+       
+        </div>
+        </div>
+        
+        <div class="row m-auto w-50">
+        <canvas class="col mt-3" id="onda1"></canvas>
+        </div>
+        
+
+        <!-- Medicion 4000Hz -->
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center mt-4">Frecuencia inicial: 4000Hz</h3>
+            </div>
+        </div>
+        
+        <div class="row input-group">
+            <div class="col">
+                <div class="input-group-prepend">
+                    <button class="btn btn-primary mr-2" id="play2">Play</button>
+                    <button class="btn btn-primary mr-2" id="pause2" onclick="stopElement2()">Pause</button>
+                    <button class="btn btn-info mr-2" type="button" id="boton2">+1 Hz</button>
+                    <button class="btn btn-info mr-2" type="button" id="boton-2">-1 Hz</button>
+                    <input type="text" class="form-control" value="4000" placeholder="" aria-label=""
+                        aria-describedby="basic-addon1" id="input2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">Hz</span>
+        
+                    </div>
+                </div>
+        
+                <div class="row m-auto w-50">
+                    <canvas class="col mt-3" id="onda2"></canvas>
+                </div>
+
+        <!-- Medicion 10000Hz -->
+<div class="row">
+    <div class="col">
+        <h3 class="text-center mt-4">Frecuencia inicial: 10000Hz</h3>
+    </div>
+</div>
+
+<div class="row input-group">
+    <div class="col">
+        <div class="input-group-prepend">
+            <button class="btn btn-primary mr-2" id="play3">Play</button>
+            <button class="btn btn-primary mr-2" id="pause3" onclick="stopElement3()">Pause</button>
+            <button class="btn btn-info mr-2" type="button" id="boton3">+1 Hz</button>
+            <button class="btn btn-info mr-2" type="button" id="boton-3">-1 Hz</button>
+            <input type="text" class="form-control" value="10000" placeholder="" aria-label=""
+                aria-describedby="basic-addon1" id="input3">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon3">Hz</span>
+
+            </div>
+        </div>
+
+        <div class="row m-auto w-50">
+            <canvas class="col mt-3" id="onda3"></canvas>
+        </div>
+
+
+    </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

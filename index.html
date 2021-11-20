@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="container p-3 m-auto bg-light">
+        <div class="row pb-3">
+        <div class="col-sm">
+        <h2 class="text-center m-2">DAP - Mediciones a lo largo del ancho de banda audible</h1>
+        </div>
+        </div>
+
+        <!-- Medicion 200Hz -->
+        <section class="bg-warning pb-4">
+        <div class="row pt-3">
+            <div class="col">
+               <h3 class="text-center">Frecuencia inicial: 200Hz</h3>
+            </div>
+        </div>
+
+        <div class="row text-center pt-3">
+            <div class="col-sm">
+                <button class="btn btn-danger mr-2" id="pause1" onclick="stopElement()">Pause</button>
+                <button class="btn btn-info mr-1" type="button" id="rango1-200">Rango 1</button>
+                <button class="btn btn-info mr-1" type="button" id="rango2-200">Rango 2</button>
+                <button class="btn btn-info mr-1" type="button" id="rango3-200">Rango 3</button>
+                <button class="btn btn-info mr-1" type="button" id="rango4-200">Rango 4</button>
+                <button class="btn btn-info mr-1" type="button" id="rango5-200">Rango 5</button>
+                <button class="btn btn-info mr-1" type="button" id="rango6-200">Rango 6</button>
+                <button class="btn btn-info mr-1" type="button" id="rango7-200">Rango 7</button>
+                <button class="btn btn-info mr-1" type="button" id="rango8-200">Rango 8</button>
+                <button class="btn btn-info mr-1" type="button" id="rango9-200">Rango 9</button>
+                <button class="btn btn-info mr-1" type="button" id="rango10-200">Rango 10</button>
+
+                <div class="row pt-2">
+                <div class="col-sm">
+                <div class="input-group-prepend w-25 m-auto">
+                <label class="input-group-text" for="seconds">Segundos del intervalo:</label>
+                <select class="custom-select" name="seconds" id="seconds-200">
+                    <option value="1" selected>1 segundo</option>
+                    <option value="2">2 segundos</option>
+                    <option value="3">3 segundos</option>
+                    <option value="4">4 segundos</option>
+                    <option value="5">5 segundos</option>
+                </select>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="row m-auto w-50">
+        <div class="col">
+        <canvas class="col mt-3" id="onda1"></canvas>
+        </div>
+        </div>
+
+        </section>
+
+        <!-- Medicion 4000Hz -->
+        <section class="bg-warning pb-4">
+            <div class="row pt-3">
+                <div class="col">
+                    <h3 class="text-center">Frecuencia inicial: 4000Hz</h3>
+                </div>
+            </div>
+        
+            <div class="row text-center pt-3">
+                <div class="col-sm">
+                    <button class="btn btn-danger mr-2" id="pause1" onclick="stopElement2()">Pause</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango1-400">Rango 1</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango2-400">Rango 2</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango3-400">Rango 3</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango4-400">Rango 4</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango5-400">Rango 5</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango6-400">Rango 6</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango7-400">Rango 7</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango8-400">Rango 8</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango9-400">Rango 9</button>
+                    <button class="btn btn-info mr-1" type="button" id="rango10-400">Rango 10</button>
+        
+                    <div class="row pt-2">
+                        <div class="col-sm">
+                            <div class="input-group-prepend w-25 m-auto">
+                                <label class="input-group-text" for="seconds">Segundos del intervalo:</label>
+                                <select class="custom-select" name="seconds" id="seconds-400">
+                                    <option value="1" selected>1 segundo</option>
+                                    <option value="2">2 segundos</option>
+                                    <option value="3">3 segundos</option>
+                                    <option value="4">4 segundos</option>
+                                    <option value="5">5 segundos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row m-auto w-50">
+                <div class="col">
+                    <canvas class="col mt-3" id="onda2"></canvas>
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- Medicion 10000Hz -->
+        <section class="bg-warning mt-3 pb-4">
+        <div class="row pt-5">
+            <div class="col">
+                <h3 class="text-center">Frecuencia inicial: 10000Hz</h3>
+            </div>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-sm">
+                <button class="btn btn-danger mr-2" id="pause3" onclick="stopElement3()">Pause</button>
+                <button class="btn btn-info mr-1" type="button" id="rango1-100">Rango 1</button>
+                <button class="btn btn-info mr-1" type="button" id="rango2-100">Rango 2</button>
+                <button class="btn btn-info mr-1" type="button" id="rango3-100">Rango 3</button>
+                <button class="btn btn-info mr-1" type="button" id="rango4-100">Rango 4</button>
+                <button class="btn btn-info mr-1" type="button" id="rango5-100">Rango 5</button>
+                <button class="btn btn-info mr-1" type="button" id="rango6-100">Rango 6</button>
+                <button class="btn btn-info mr-1" type="button" id="rango7-100">Rango 7</button>
+                <button class="btn btn-info mr-1" type="button" id="rango8-100">Rango 8</button>
+                <button class="btn btn-info mr-1" type="button" id="rango9-100">Rango 9</button>
+                <button class="btn btn-info mr-1" type="button" id="rango10-100">Rango 10</button>                    
+            </div>
+            </div>
+        
+            <div class="row pt-2">
+                <div class="col-sm">
+                    <div class="input-group-prepend w-25 m-auto">
+                        <label class="input-group-text" for="seconds">Segundos del intervalo:</label>
+                        <select class="custom-select" name="seconds" id="seconds-100">
+                            <option value="1" selected>1 segundo</option>
+                            <option value="2">2 segundos</option>
+                            <option value="3">3 segundos</option>
+                            <option value="4">4 segundos</option>
+                            <option value="5">5 segundos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="row m-auto w-50">
+            <div class="col">
+                <canvas class="col mt-3" id="onda3"></canvas>
+            </div>
+        </div>
+</section>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
